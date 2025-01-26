@@ -1,0 +1,87 @@
+.MainContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+    justify-content: space-between;
+  
+    
+   
+ 
+    
+}
+
+.image1 {
+    width: 40%;
+
+    margin: 0;
+    
+ 
+    
+}
+.container {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  
+    align-self: center;
+    
+    
+ 
+    box-sizing: border-box;
+}
+.form {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.login{
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    align-self: end;
+    gap: 10px;
+ 
+  
+
+   
+ 
+  
+   
+   
+
+  
+   
+   
+
+}
+.loging {
+    background-color: #007bff;
+    cursor: pointer;
+}
+.form input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.loginer{
+    color: #007bff;
+}

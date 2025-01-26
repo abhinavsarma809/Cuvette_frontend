@@ -1,0 +1,103 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+   
+    align-items: center;
+}
+.userName{
+    display: flex;
+    flex-direction: row;
+}
+.create{
+    background-color: blue;
+    color: white;
+
+}
+.firstRow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+    background: #3B3C51;
+    padding: 0 1em;
+
+}
+.url{
+    display: flex;
+    flex-direction: column;
+  
+    text-align: start;
+ 
+   
+
+   
+}
+.link{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+    gap: 10px;
+    
+
+    
+    backdrop-filter: blur(10px); 
+
+  
+    z-index: 1000;
+
+    border-radius: 8px;
+
+
+    border-radius: 8px;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  
+}
+
+.url1{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+
+.date{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    padding-bottom: 5em;
+}
+.lastOne{
+    display: flex;
+    justify-content: space-between;
+ 
+
+
+}
+.save{
+    background-color: blue;
+    color: white;
+
+}
+.clear{
+    
+}
+.header1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: start;
+    margin: 4em 0;
+    gap: 20px;
+   
+}
+.DashBoard{
+    color: blue;
+}
