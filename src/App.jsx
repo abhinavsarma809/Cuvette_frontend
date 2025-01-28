@@ -3,7 +3,7 @@ import './App.css'
 import { Toaster } from 'react-hot-toast';
 import { Login,Registers,Home,Link,UserDetails,Analytics,} from '../pages/index';
 
-import { BrowserRouter, Routes,Route} from 'react-router-dom';
+import { BrowserRouter, Route,Routes} from 'react-router-dom';
 
 function App() {
 
