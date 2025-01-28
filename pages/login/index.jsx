@@ -65,18 +65,20 @@ const Login = () => {
 
   return (
     <div className={styles.MainContainer}>
+  
       <img
         src="https://res.cloudinary.com/dy6uubcd1/image/upload/v1737622494/Screenshot_23-1-2025_141923_www.figma.com_fvjas1.jpg"
         className={styles.image1}
         alt="Background"
       />
+    
 
       <div className={styles.container}>
         <div className={styles.login}>
-          <button className={styles.signup}>
-            Signup
-          </button>
-          <button className={styles.loging}>Login</button>
+ <button className={styles.signup} onClick={()=>navigate('/register')}>
+                          Signup
+                      </button>
+                      <button className={styles.loging} onClick={()=>navigate('/login')}>Login</button>
         </div>
 
         <form onSubmit={handleSubmit} className={styles.form}>

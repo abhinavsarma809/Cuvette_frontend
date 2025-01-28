@@ -19,6 +19,7 @@ const Register = () => {
       name: '',
       email: '',
       password: '',
+      phone:'',
      
     });
     useEffect(() => {
@@ -34,9 +35,10 @@ const Register = () => {
         name: null,
         email: null,
         password: null,
+        phone: null,
       });
   
-      // Validation
+      
       if (!formData.name || formData.name.length < 1) {
         setFormError((prevFormError) => ({
           ...prevFormError,
@@ -63,6 +65,13 @@ const Register = () => {
         }));
         errors = true;
       }
+      if (!formData.phone || formData.phone.length < 1 || !formData.phone.includes('@') || !formData.phone.includes('.')) {
+        setFormError((prevFormError) => ({
+          ...prevFormError,
+          phone: 'Invalid number',
+        }));
+        errors = true;
+      }
   
       if (errors) {
         return;
@@ -70,14 +79,16 @@ const Register = () => {
   
       try {
         setLoading(true);
-        const response = await register(formData); // Call to your register service
+        const response = await register(formData); 
 
         if (response.token) {
         navigate('/', { state: { userName: response.name } }); 
           localStorage.setItem('token', response.token);
           localStorage.setItem('userId', response.id);
-          localStorage.setItem('userName', response.name); // Store the name in localStorage
-            // Redirect to Home
+          localStorage.setItem('userName', response.name); 
+          localStorage.setItem('email', response.email); 
+          localStorage.setItem('phone', response.phone); 
+            
         }
       } catch (error) {
         console.error("Error during registration:", error);
@@ -100,16 +111,13 @@ const Register = () => {
            <div className={StyleSheet.login}>
                   <p></p>
                   
-                      <button className={StyleSheet.signup}>
+                      <button className={StyleSheet.signup} onClick={()=>navigate('/register')}>
                           Signup
                       </button>
-                      <button className={StyleSheet.loging}>Login</button>
+                      <button className={StyleSheet.loging} onClick={()=>navigate('/login')}>Login</button>
           
                  </div>
-           <p></p>
-           <p></p>
-           <p></p>
-           <p></p>
+         
            
      
           <form onSubmit={handleSubmit} className={StyleSheet.form}>
@@ -135,7 +143,16 @@ const Register = () => {
               />
             </div>
             {formError.email && <p style={{ color: 'red' }} className={StyleSheet.emailerrors}>{formError.email}</p>}
-  
+            <div className={StyleSheet.inputPhone}>
+              <input
+                type="password"
+                value={formData.phone}
+                onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                placeholder="Mobile Number"
+                className={StyleSheet.phone}
+              />
+            </div>
+            {formError.phone && <p style={{ color: 'red' }} className={StyleSheet.phoneerrors}>{formError.phone}</p>}
             <div className={StyleSheet.inputPassword}>
               <input
                 type="password"
@@ -147,7 +164,17 @@ const Register = () => {
             </div>
             {formError.password && <p style={{ color: 'red' }} className={StyleSheet.passworderrors}>{formError.password}</p>}
             
-           
+            <div className={StyleSheet.inputPassword}>
+              <input
+                type="password"
+                value={formData.password}
+                onChange={(e) => setFormData({ ...formData, password: e.target.value })}
+                placeholder="Confirm Password"
+                className={StyleSheet.password}
+              />
+            </div>
+            {formError.password && <p style={{ color: 'red' }} className={StyleSheet.passworderrors}>{formError.password}</p>}
+            
             <button disabled={loading} type="submit" className={StyleSheet.register}>
               {loading ? 'Loading... ' : 'Register'}
             </button>

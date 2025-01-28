@@ -5,6 +5,7 @@ import Link from "./link";
 import UserDetails from "./userDetails";
 import Analytics from "./Analytics";
 
+
 export{
     Login,
     Registers,
@@ -13,6 +14,7 @@ export{
     UserDetails,
 
     Analytics ,
+
    
     
   

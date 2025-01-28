@@ -6,6 +6,7 @@
 .linkContainer{
     display: flex;
     flex-direction: column;
+    width: 100%;
     justify-content: space-between;
 }
 
@@ -53,7 +54,12 @@
   
   .pagination {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    align-self: center;
+  
+
+  
+ 
     gap: 10px;
   }
   
@@ -187,14 +193,22 @@
   .noButton:hover {
     opacity: 0.8;
   }
+ 
+  .container{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+  }
   .header{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-between;
-   
-    align-items: center;
-}
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      
+      
+  }
 .userName{
     display: flex;
     flex-direction: row;
@@ -208,8 +222,9 @@
     gap: 20px;
    
 }
-.DashBoard{
-    color: blue;
+.URL{
+  color: blue;
+    
 }
 
 .linksTable{
@@ -222,5 +237,176 @@
     display: flex;
     flex-direction:row;
     gap: 20px;
+
+}
+.create{
+  background-color: blue;
+  color: white;
+}
+.remarks{
+  border-radius: 23px;
+}
+.user{
+  background-color: yellow;
+  border-radius: 23px;
+  color: red;
+}
+.linksTable {
+  width: 50%;
+  border-collapse: collapse;
+
+
+  margin-top: 7%;
+  font-size: 14px;
+  text-align: center;
+}
+
+.linksTable th,
+.linksTable td {
+  border: 1px solid black;
+  padding: 8px;
+}
+
+.linksTable th {
+  background-color:gray;
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+}
+
+.linksTable tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.linksTable tr:hover {
+  background-color: #f1f1f1;
+}
+
+.linksTable td {
+  text-align: center;
+}
+
+.linksTable .icon {
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.pagination {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.pagination button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  border: 1px solid #ddd;
+  background-color: #f4f4f4;
+  cursor: pointer;
+}
+
+.pagination button:hover {
+  background-color: #e2e2e2;
+}
+
+.pagination .activeButton {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+.firstRow{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: white;
+  background: #3B3C51;
+  padding: 0 1em;
+
+}
+.url{
+  display: flex;
+  flex-direction: column;
+
+  text-align: start;
+
+ 
+
+ 
+}
+.link{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: auto;
+  gap: 10px;
+  
+
+  
+  backdrop-filter: blur(10px); 
+
+
+  z-index: 1000;
+
+  
+
+
+  border-radius: 8px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+
+}
+
+.url1{
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+
+.date{
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  padding-bottom: 5em;
+}
+.lastOne{
+  display: flex;
+  justify-content: space-between;
+
+
+
+}
+.save{
+  background-color: blue;
+  color: white;
+
+}
+.logout{
+  text-align: end;
+}
+@media screen and (max-width: 600px) {
+  .header{
+  justify-content: space-between;
+   width: 200%;
+   
+  }
+  .cuvette{
+      width: 10%;
+  }
+  .create{
+      width: 10%;
+      height: 5%;
+      font-size: x-small;
+  }
+  .remark{
+      width: 10%;
+      height: 5%;
+      font-size: xx-small;
+  }
+  .pagination{
+    display: flex;
+    align-items: center;
+    align-self: center;
+
+    
+    text-align: center;
+  }
 
 }

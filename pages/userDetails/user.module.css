@@ -1,0 +1,129 @@
+.Save{
+    background-color: red;
+   
+}
+.UserName{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+   
+    
+    justify-content: center;
+    gap: 10px;
+    margin: auto;
+
+   
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+   
+}
+.Delete{
+    background-color: blue;
+ 
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+   
+    align-items: center;
+}
+.userName{
+    display: flex;
+    flex-direction: row;
+}
+.create{
+    background-color: blue;
+    color: white;
+
+}
+.firstRow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+    background: #3B3C51;
+    padding: 0 1em;
+
+}
+.url{
+    display: flex;
+    flex-direction: column;
+  
+    text-align: start;
+ 
+   
+
+   
+}
+.header1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: start;
+    margin: 4em 0;
+    gap: 20px;
+   
+}
+.Settings{
+    color: blue;
+}
+.secondRow{
+    display: flex;
+    flex-direction:row;
+  
+    align-items: center;
+   
+
+
+}
+.remark{
+    border-radius: 23px;
+}
+.user{
+    background-color: yellow;
+    border-radius: 23px;
+    color: red;
+}
+@media screen and (max-width: 600px) {
+    .header{
+    justify-content: space-between;
+     width: 200%;
+     
+    }
+    .cuvette{
+        width: 10%;
+    }
+    .create{
+        width: 10%;
+        height: 5%;
+        font-size: x-small;
+    }
+    .remark{
+        width: 10%;
+        height: 5%;
+        font-size: xx-small;
+    }
+    .pagination{
+      display: flex;
+      align-items: center;
+      align-self: center;
+  
+      
+      text-align: center;
+
+    }
+    .UserName{
+        
+        align-items: center;
+        width: 200%;
+    }
+  
+  }
+  

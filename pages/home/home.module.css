@@ -9,8 +9,9 @@
     flex-direction: row;
     width: 100%;
     justify-content: space-between;
-   
     align-items: center;
+    
+    
 }
 .userName{
     display: flex;
@@ -54,7 +55,7 @@
   
     z-index: 1000;
 
-    border-radius: 8px;
+    
 
 
     border-radius: 8px;
@@ -96,8 +97,121 @@
     align-self: start;
     margin: 4em 0;
     gap: 20px;
+    align-items: flex-start;
+    
    
 }
 .DashBoard{
     color: blue;
+}
+.secondRow{
+    display: flex;
+    flex-direction:row;
+  
+    align-items: center;
+   
+
+
+}
+.analyticsSection{
+    display: flex;
+  
+    flex-direction: column;
+  
+    margin: auto;
+  
+    align-self: center;
+
+}
+.analyticsGrid{
+    display: flex;
+    justify-content: space-between;
+    
+   
+    
+    
+
+    text-align: center;
+    flex-direction: row;
+    gap: 30px;
+
+}
+.Rows{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+   
+    gap: 20px;
+}
+
+.clicks1{
+  font-size: x-large;
+
+
+
+  
+    color: blue;
+}
+.user{
+    background-color: yellow;
+    border-radius:23px;
+    color: #ff0000;
+
+}
+
+
+
+.barRow {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    margin: auto;
+
+  }
+  
+ 
+  
+  .bar {
+    height: 20px; 
+ 
+
+  }
+  
+.DateWise{
+    color: lightblue;
+
+}
+.remark{
+    border-radius:23px ;
+}
+.logout{
+    color: #000;
+    width: 10%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-self: flex-end;
+}
+
+@media screen and (max-width: 600px) {
+    .header{
+     font-size: small;
+     
+    }
+    .cuvette{
+        width: 10%;
+    }
+    .create{
+        width: 10%;
+        height: 5%;
+        font-size: x-small;
+    }
+    .remark{
+        width: 10%;
+        height: 5%;
+        font-size: xx-small;
+    }
+   
 }
