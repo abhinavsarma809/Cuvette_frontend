@@ -65,13 +65,14 @@ const Register = () => {
         }));
         errors = true;
       }
-      if (!formData.phone || formData.phone.length < 1 || !formData.phone.includes('@') || !formData.phone.includes('.')) {
+      if (!/^\d{10}$/.test(formData.phone)) {
         setFormError((prevFormError) => ({
           ...prevFormError,
-          phone: 'Invalid number',
+          phone: 'Invalid phone number. Must be 10 digits.',
         }));
         errors = true;
       }
+      
   
       if (errors) {
         return;
