@@ -30,7 +30,7 @@ const Analytics = () => {
   const fetchLinks = async () => {
     try {
       const fetchedLinks = await getLinks(userId);
-      console.log("Fetched Links:", fetchedLinks); // Check the structure of fetched data
+      console.log("Fetched Links:", fetchedLinks);
       setLinks(fetchedLinks);
     } catch (err) {
       console.error("Error fetching links:", err.message);
@@ -42,7 +42,7 @@ const Analytics = () => {
         if (!userId) return; 
   
         const { total, dateWise, deviceWise } = await getClicksData(userId);
-        console.log("Fetched Analytics Data:", { total, dateWise, deviceWise }); // Log fetched data
+        console.log("Fetched Analytics Data:", { total, dateWise, deviceWise }); 
   
         if (total !== undefined) setTotalClicks(total);
         if (dateWise) setDateWiseClicks(dateWise);
@@ -94,7 +94,7 @@ const Analytics = () => {
     ? links.filter(link =>
         link.originalUrl.toLowerCase().includes(searchQuery.toLowerCase()) ||
         link.shortUrl.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        (link.remarks && link.remarks.toLowerCase().includes(searchQuery.toLowerCase())) // Check remarks if available
+        (link.remarks && link.remarks.toLowerCase().includes(searchQuery.toLowerCase())) 
       )
     : links;
 

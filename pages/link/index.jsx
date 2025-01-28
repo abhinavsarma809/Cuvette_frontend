@@ -21,9 +21,9 @@ const Links = () => {
     expiryDate: "",
     remarks: "",
   });
-  const [isCreatePopupOpen, setIsCreatePopupOpen] = useState(false); // For the "Create new" button popup
-  const [showLogout, setShowLogout] = useState(false); // State to control showing the logout button
-  const [searchTerm, setSearchTerm] = useState(""); // State for search input
+  const [isCreatePopupOpen, setIsCreatePopupOpen] = useState(false); 
+  const [showLogout, setShowLogout] = useState(false);
+  const [searchTerm, setSearchTerm] = useState(""); 
 
   const userId = localStorage.getItem("userId");
 
