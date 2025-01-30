@@ -195,9 +195,12 @@
     align-self: flex-end;
 }
 
+
+
 @media screen and (max-width: 600px) {
     .header{
-     font-size: small;
+    justify-content: space-between;
+     width: 200%;
      
     }
     .cuvette{
@@ -213,5 +216,25 @@
         height: 5%;
         font-size: xx-small;
     }
-   
-}
+    .pagination{
+      display: flex;
+      align-items: center;
+      align-self: center;
+  
+      
+      text-align: center;
+    }
+    .secondRow{
+       
+        justify-content: space-between;
+        gap: 20px;
+       
+    }
+    .analyticsSection{
+        margin: auto;
+        text-align: end;
+      
+    }
+  
+  }
+  
